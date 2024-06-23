@@ -36,9 +36,11 @@
 
 		return srcset;
 	}
+
+	// add `srcset={buildSrcset()}` to the img?
 </script>
 
-<img style={borderRadius ? "border-radius: 30%" : ""} srcset={buildSrcset()} {src} {alt} loading="lazy" decoding="async" class:full-bleed={fullBleed} />
+<img style={borderRadius ? "border-radius: 30%" : ""}  {src} {alt} loading="lazy" decoding="async" class:full-bleed={fullBleed} />
 
 <style lang="scss">
 	img {
