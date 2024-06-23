@@ -18,4 +18,4 @@ export const description =
 
 export const title = 'WSHL Resource Bank';
 
-export const image = `${siteBaseUrl}/images/site-preview.png`;
+export const image = `${siteBaseUrl}/images/WSHL-logo2.png`;

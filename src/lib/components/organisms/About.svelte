@@ -18,6 +18,7 @@
 		}
 	}
 
+	let imagePath
 	$: imagePath = changeImage($theme)
 </script>
 
@@ -38,7 +39,7 @@
 		</p>
 	</div>
 	<div class="image">
-		<Image src={imagePath} alt="WSHL Logo" borderRadius={true} />
+		<Image src={"/images/wshl-original-i.webp"} alt="WSHL Logo" borderRadius={true} />
 	</div>
 </section>
 
