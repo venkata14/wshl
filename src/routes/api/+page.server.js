@@ -42,8 +42,8 @@ export const actions = {
         
         ${resourceTextDescription}`
 
-        const didTwilioWork = sendSMS(content, number, true)
-        if (!didTwilioWork) {
+        sendSMS(content, number, true).then(e => console.log(e))
+        if (true) {
             throw new Error(400, "Bad Request to the Twilio API")
         }
     }

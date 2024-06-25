@@ -12,7 +12,7 @@
 	}
 
 	export let resourceToSend: 'food' | 'transportation';
-	export let resourceTextDescription: string = "";
+	export let resourceTextDescription: string = '';
 
 	async function submitForm(e) {
 		e.preventDefault();
@@ -52,15 +52,26 @@
 		<div>
 			<TelephoneInput bind:valid bind:detailedValue />
 			{#if !valid}
-				<div class="small warning">Please enter a valid phone number!</div>
-			{:else if responceFromServer === 'before'}{:else if responceFromServer === 'success'}
-				<div class="small">Message Sent!</div>
+				<div class="spacing small warning">Please enter a valid phone number!</div>
+			{:else if responceFromServer === 'before'}
+				<div class="spacing smaller small-width">
+					By entering your phone number, you consent to a one time message to receive this resource
+					over SMS.
+				</div>
+			{:else if responceFromServer === 'success'}
+				<div class="spacing small">Message Sent!</div>
 			{:else if responceFromServer === 'error'}
-				<div class="small warning">
+				<div class="spacing smaller small-width warning">
 					There was an error, sorry for the inconvenience, please try again at another time.
 				</div>
 			{:else if responceFromServer === 'invalid'}
-				<div class="small warning">Invalid Phone Number/Typing.</div>
+				<div class="spacing small warning">Invalid Phone Number/Typing.</div>
+			{/if}
+
+			{#if valid && detailedValue}
+				<div class="spacing smaller small-width">
+					By Clicking "Submit" you agree to our <a href="/consent-clause">Consent Clause</a>
+				</div>
 			{/if}
 		</div>
 		{#if valid && detailedValue}
@@ -82,11 +93,20 @@
 	}
 	.container {
 		display: flex;
-		align-items: center;
+		align-items: start;
 		justify-content: center;
 	}
 	.small {
 		font-size: small;
+	}
+	.spacing {
+		margin-top: 5px;
+	}
+	.smaller {
+		font-size: 8.8pt;
+	}
+	.small-width {
+		width: 250px;
 	}
 	.warning {
 		color: red;
