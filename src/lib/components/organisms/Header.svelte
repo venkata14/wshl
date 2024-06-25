@@ -76,4 +76,10 @@
 			}
 		}
 	}
+
+	@media print {
+		header {
+			display: none;
+		}
+	}
 </style>

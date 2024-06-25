@@ -68,4 +68,10 @@
 			--accent-color: var(--color--callout-accent--success);
 		}
 	}
+
+	@media print {
+		.callout-block {
+			display: none;
+		}
+	}
 </style>

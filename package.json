@@ -49,6 +49,7 @@
 		"@fontsource/inter": "^4.5.15",
 		"@fontsource/merriweather": "^4.5.14",
 		"@fontsource/ubuntu-mono": "^4.5.11",
+		"qrious": "^4.0.2",
 		"svelte-tel-input": "^3.3.9",
 		"twilio": "^5.1.1"
 	}

@@ -28,4 +28,10 @@
 			color: var(--color--secondary);
 		}
 	}
+
+	@media print {
+		.tag {
+			display: none;
+		}
+	}
 </style>

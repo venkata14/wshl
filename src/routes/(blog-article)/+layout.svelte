@@ -2,6 +2,7 @@
 	import Header from '$lib/components/organisms/Header.svelte';
 	import Footer from '$lib/components/organisms/Footer.svelte';
 	import Tag from '$lib/components/atoms/Tag.svelte';
+	import BlogUtilsBar from '$lib/components/organisms/BlogUtilsBar.svelte';
 	import dateformat from 'dateformat';
 
 	import { keywords, siteBaseUrl, title } from '$lib/data/meta';
@@ -52,12 +53,16 @@
 			<div class="header">
 				{#if post}
 					<h1>{post.title}</h1>
-					<div class="note">Published on {dateformat(post.date, 'UTC:dd mmmm yyyy')}</div>
+					<div class="note do-not-show-on-print">
+						Published on {dateformat(post.date, 'UTC:dd mmmm yyyy')}
+					</div>
 					{#if post.updated}
-						<div class="note">Updated on {dateformat(post.updated, 'UTC:dd mmmm yyyy')}</div>
+						<div class="note do-not-show-on-print">
+							Updated on {dateformat(post.updated, 'UTC:dd mmmm yyyy')}
+						</div>
 					{/if}
 					{#if post.tags?.length}
-						<div class="tags">
+						<div class="tags do-not-show-on-print">
 							{#each post.tags as tag}
 								<Tag>{tag}</Tag>
 							{/each}
@@ -66,17 +71,20 @@
 				{/if}
 			</div>
 			{#if post && post.coverImage}
-				<div class="cover-image">
+				<div class="cover-image do-not-show-on-print">
 					<Image src={post.coverImage} alt={post.title} />
 				</div>
 			{/if}
 			<div class="content">
+				<div class="do-not-show-on-print">
+					<BlogUtilsBar />
+				</div>
 				<slot />
 			</div>
 		</article>
 
 		{#if post.relatedPosts && post.relatedPosts.length > 0}
-			<div class="container">
+			<div class="container do-not-show-on-print">
 				<RelatedPosts posts={post.relatedPosts} />
 			</div>
 		{/if}
@@ -182,6 +190,24 @@
 			justify-content: center;
 			gap: 5px;
 			flex-wrap: wrap;
+		}
+	}
+
+	@media print {
+		.do-not-show-on-print,
+		h1 {
+			display: none;
+		}
+		@page {
+			/* Adjust the page margins to remove default headers and footers */
+			margin: 0mm;
+		}
+		* {
+			color: black;
+			line-height: 0;
+		}
+		.article-layout {
+			width: 100%;
 		}
 	}
 </style>
