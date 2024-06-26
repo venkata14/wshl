@@ -12,10 +12,11 @@ tags:
 <script>
   import Callout from "$lib/components/molecules/Callout.svelte";
   import PhoneNumber from "$lib/components/molecules/PhoneNumber.svelte"
+  import {siteBaseUrl} from "$lib/data/meta"
 
   const resourceTextDescription = `
 
-For more information/detail go to: ${"WEBSITE"}`
+For more information/detail go to: ${siteBaseUrl + "WEBSITE"}`
 </script>
 
 <Callout type="info">

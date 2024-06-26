@@ -12,6 +12,7 @@ tags:
 <script>
   import Callout from "$lib/components/molecules/Callout.svelte";
   import PhoneNumber from "$lib/components/molecules/PhoneNumber.svelte"
+  import {siteBaseUrl} from "$lib/data/meta"
 
   const resourceTextDescription = `Gleaners is a food bank dedicated to ending hunger by distributing nutritious food to those in need. Through partnerships with local organizations, food drives, and community programs, Gleaners collects, stores, and distributes food to families, children, and individuals facing food insecurity. Their mission is to ensure no one goes hungry by providing healthy meals and promoting food access and nutrition education.
 
@@ -29,7 +30,7 @@ Click on the "Mobile Distribution Events" on the top menu. Click through the dif
 
 Call 866-453-2637 for help.
 
-For more information/detail go to: ${"WEBSITE"}`
+For more information/detail go to: ${siteBaseUrl + "gleaners"}`
 </script>
 
 <Callout type="info">

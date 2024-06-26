@@ -14,6 +14,7 @@ tags:
 <script>
   import Callout from "$lib/components/molecules/Callout.svelte";
   import PhoneNumber from "$lib/components/molecules/PhoneNumber.svelte"
+  import {siteBaseUrl} from "$lib/data/meta"
 
   const resourceTextDescription = `Matrix Human Services is a nonprofit organization dedicated to empowering individuals and families to achieve self-sufficiency. By offering comprehensive support services, including education, workforce development, and community resources, Matrix Human Services addresses the root causes of poverty and helps clients build brighter futures. Their holistic approach focuses on nurturing, uplifting, and transforming lives in Detroit and surrounding areas.
 
@@ -25,7 +26,7 @@ Matrix Human Services offers free housing counseling services to help you naviga
 
 3) Click “Sigh up today to get started” and fill out the form 
 
-For more information/detail go to: ${"WEBSITE"}`
+For more information/detail go to: ${siteBaseUrl + "matrix-human-services"}`
 </script>
 
 <Callout type="info">

@@ -14,6 +14,7 @@ tags:
 <script>
   import Callout from "$lib/components/molecules/Callout.svelte";
   import PhoneNumber from "$lib/components/molecules/PhoneNumber.svelte"
+  import {siteBaseUrl} from "$lib/data/meta"
 
   const resourceTextDescription = `Forgotten Harvest is a Michigan-based non-profit that fights hunger by rescuing perfectly good, surplus food from grocery stores and restaurants. They then distribute this food to soup kitchens, shelters, and pantries, ensuring it nourishes those in need while reducing food waste.
 
@@ -39,7 +40,7 @@ Scroll halfway down the page until you find “Delivery Services” and click on
 
 Call 248-268-7756 for help. 
 
-For more information/detail go to: ${"WEBSITE"}`
+For more information/detail go to: ${siteBaseUrl + "forgotten-harvest"}`
 </script>
 
 <Callout type="info">

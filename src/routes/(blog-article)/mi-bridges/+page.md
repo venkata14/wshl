@@ -13,6 +13,7 @@ tags:
 <script>
   import Callout from "$lib/components/molecules/Callout.svelte";
   import PhoneNumber from "$lib/components/molecules/PhoneNumber.svelte"
+  import {siteBaseUrl} from "$lib/data/meta"
 
   const resourceTextDescription = `MI Bridges SNAP Program is an online resource that helps Michigan residents apply for and manage their Supplemental Nutrition Assistance Program (SNAP) benefits. It provides a user-friendly platform to check eligibility, submit applications, and track benefit status. Users can also access additional support services and resources to help meet their needs. MI Bridges simplifies the process of obtaining food assistance, ensuring that individuals and families have access to nutritious food.
 
@@ -22,7 +23,7 @@ tags:
 
 3) If you are, close the popup and click on “Apply for Benefits today”. Fill out the following forms.
 
-For more information/detail go to: ${"WEBSITE"}`
+For more information/detail go to: ${siteBaseUrl + "mi-bridges"}`
 </script>
 
 <Callout type="info">

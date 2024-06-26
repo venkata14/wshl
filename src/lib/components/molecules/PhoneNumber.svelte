@@ -37,7 +37,9 @@
 		if (response.ok) {
 			console.log('Form submitted successfully!');
 			responceFromServer = 'success';
-			// Update UI or redirect as needed
+
+			// reset to prevent spam
+			detailedValue = null
 		} else {
 			console.error('Error submitting form:', await response.text());
 			responceFromServer = 'error';
@@ -70,7 +72,7 @@
 
 			{#if valid && detailedValue}
 				<div class="spacing smaller small-width">
-					By Clicking "Submit" you agree to our <a href="/consent-clause">Consent Clause</a>
+					By Clicking "Submit" you agree to our <a href="/consent-clause" target="_blank" >Consent Clause</a>
 				</div>
 			{/if}
 		</div>

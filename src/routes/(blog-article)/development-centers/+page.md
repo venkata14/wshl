@@ -12,6 +12,7 @@ tags:
 <script>
   import Callout from "$lib/components/molecules/Callout.svelte";
   import PhoneNumber from "$lib/components/molecules/PhoneNumber.svelte"
+  import {siteBaseUrl} from "$lib/data/meta"
 
   const resourceTextDescription = `Development Centers offer comprehensive mental health and wellness services to individuals and families. These centers provide a range of support, including therapy, counseling, and psychiatric care, aimed at promoting emotional and mental well-being. With a team of experienced professionals, Development Centers focus on personalized treatment plans to address various mental health needs, helping clients achieve their personal goals and improve their quality of life.
 
@@ -19,7 +20,7 @@ tags:
 
 2) If this resource is of interest, call (888) 280-0186 to make an appointment or ask questions.
 
-For more information/detail go to: ${"WEBSITE"}`
+For more information/detail go to: ${siteBaseUrl + "development-center"}`
 </script>
 
 <Callout type="info">

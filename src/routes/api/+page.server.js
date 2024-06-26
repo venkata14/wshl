@@ -9,6 +9,15 @@ let auth = TWILIO_AUTHTOKEN
 const d = {
     "food": "This is the Food Resource you requested from the WSHL Resource Bank!",
     "transportation": "This is the Transportation Resource you requested from the WSHL Resource Bank!",
+    "healthcare": "This is the Healthcare Resource you requested from the WSHL Resource Bank!",
+    "supplies": "This is the Supplies Resource you requested from the WSHL Resource Bank!",
+    "jobIncome": "This is the Job/Income Resource you requested from the WSHL Resource Bank!",
+    "utilities": "This is the Utilities Resource you requested from the WSHL Resource Bank!",
+    "mental": "This is the Mental Health Resource you requested from the WSHL Resource Bank!",
+    "safety": "This is the Safety Resource you requested from the WSHL Resource Bank!",
+    "physical": "This is the Physical Health Resource you requested from the WSHL Resource Bank!",
+    "housing": "This is the Housing Resource you requested from the WSHL Resource Bank!",
+    "pharmacy": "This is the Pharmacy Resource you requested from the WSHL Resource Bank!",
 }
 
 async function sendSMS(content = "Sample", to = "+18777804236", devShutDown = true) {
@@ -42,8 +51,10 @@ export const actions = {
         
         ${resourceTextDescription}`
 
-        sendSMS(content, number, true).then(e => console.log(e))
-        if (true) {
+        const didTwilioWork = sendSMS(content, number, false)
+        const bool = await didTwilioWork
+        console.log(bool)
+        if (!bool) {
             throw new Error(400, "Bad Request to the Twilio API")
         }
     }

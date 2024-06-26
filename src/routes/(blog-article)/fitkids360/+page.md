@@ -13,6 +13,7 @@ tags:
 <script>
   import Callout from "$lib/components/molecules/Callout.svelte";
   import PhoneNumber from "$lib/components/molecules/PhoneNumber.svelte"
+  import {siteBaseUrl} from "$lib/data/meta"
 
   const resourceTextDescription = `FitKids360 is a comprehensive wellness program designed to help children and their families achieve healthier lifestyles. Combining fitness, nutrition education, and behavioral health, FitKids360 provides a supportive environment for children to learn about and practice healthy habits. The program includes fun physical activities, interactive nutrition lessons, and personalized support to encourage long-term well-being and positive lifestyle changes. FitKids360 aims to make health and fitness accessible and enjoyable for every family.
 
@@ -22,7 +23,7 @@ tags:
 
 3) If so, click “Sign Up” at the top of the page and complete the form.
 
-For more information/detail go to: ${"WEBSITE"}`
+For more information/detail go to: ${siteBaseUrl + "fitkids360"}`
 </script>
 
 <Callout type="info">

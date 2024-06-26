@@ -13,6 +13,7 @@ tags:
 <script>
   import Callout from "$lib/components/molecules/Callout.svelte";
   import PhoneNumber from "$lib/components/molecules/PhoneNumber.svelte"
+  import {siteBaseUrl} from "$lib/data/meta"
 
   const resourceTextDescription = `NAMI Family-to-Family is a free, 8-session educational program for family, significant others, and friends of people living with mental health conditions. It is designed to help them understand and support their loved ones while maintaining their own well-being. The program provides information about mental illnesses, treatment options, communication strategies, and resources available to families.
 
@@ -26,7 +27,7 @@ tags:
 
 5) Click “Details” on the right, then “Click to Register”
 
-For more information/detail go to: ${"WEBSITE"}`
+For more information/detail go to: ${siteBaseUrl + "nami-family"}`
 </script>
 
 <Callout type="info">

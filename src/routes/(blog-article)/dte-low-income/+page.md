@@ -13,6 +13,7 @@ tags:
 <script>
   import Callout from "$lib/components/molecules/Callout.svelte";
   import PhoneNumber from "$lib/components/molecules/PhoneNumber.svelte"
+  import {siteBaseUrl} from "$lib/data/meta"
 
   const resourceTextDescription = `DTE's Low Income Programs provide financial assistance and resources to help eligible customers manage their energy bills. These programs include payment assistance, energy efficiency upgrades, and personalized support to reduce energy costs. Designed to ensure that all customers have access to affordable energy, DTE's initiatives help alleviate financial stress and promote energy conservation.
 
@@ -22,7 +23,7 @@ If you are behind on your energy bill - call (800) 477-4747 to get more informat
 
 For energy assistance programs, scroll to the bottom of the page.
 
-For more information/detail go to: ${"WEBSITE"}`
+For more information/detail go to: ${siteBaseUrl + "dte-low-income"}`
 </script>
 
 <Callout type="info">

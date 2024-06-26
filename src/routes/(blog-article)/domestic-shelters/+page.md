@@ -14,6 +14,7 @@ tags:
 <script>
   import Callout from "$lib/components/molecules/Callout.svelte";
   import PhoneNumber from "$lib/components/molecules/PhoneNumber.svelte"
+  import {siteBaseUrl} from "$lib/data/meta"
 
   const resourceTextDescription = `Domestic Shelters in Detroit provide safe haven and support for individuals facing domestic violence. These shelters offer emergency housing, counseling, legal assistance, and resources to help survivors rebuild their lives. With a focus on safety, empowerment, and healing, they are dedicated to providing compassionate care and essential services to those in need.
 
@@ -21,7 +22,7 @@ tags:
 
 2) Find a shelter/program and call the number under “Admin” or “Phone” to receive help.
 
-For more information/detail go to: ${"WEBSITE"}`
+For more information/detail go to: ${siteBaseUrl + "domestic-shelters"}`
 </script>
 
 <Callout type="info">

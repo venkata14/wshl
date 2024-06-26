@@ -13,6 +13,7 @@ tags:
 <script>
   import Callout from "$lib/components/molecules/Callout.svelte";
   import PhoneNumber from "$lib/components/molecules/PhoneNumber.svelte"
+  import {siteBaseUrl} from "$lib/data/meta"
 
   const resourceTextDescription = `Detroit At Work is a comprehensive resource for job seekers and employers in Detroit. It offers a wide range of services, including job training programs, employment opportunities, career counseling, and support for career advancement. Detroit At Work connects residents with local employers and provides the tools and resources needed to succeed in today's job market.
 
@@ -27,7 +28,7 @@ Go to the “Events” tab and find a fair that works for you.
 Career Coach + Plan:
 Go to the “Locations” tab, find a location that’s close to you and call 313-962-9675 to schedule an appointment
 
-For more information/detail go to: ${"WEBSITE"}`
+For more information/detail go to: ${siteBaseUrl + "detroit-at-work"}`
 </script>
 
 <Callout type="info">

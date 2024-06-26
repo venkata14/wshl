@@ -13,6 +13,7 @@ tags:
 <script>
   import Callout from "$lib/components/molecules/Callout.svelte";
   import PhoneNumber from "$lib/components/molecules/PhoneNumber.svelte"
+  import {siteBaseUrl} from "$lib/data/meta"
 
   const resourceTextDescription = `The Detroit Water Project, now known as The Human Utility, is a non-profit organization that helps low-income families pay their water bills. By connecting donors with individuals in need, The Human Utility ensures that vulnerable communities have access to essential water services. The platform allows for direct financial assistance, making it easy for donors to make a meaningful impact on someone's life.
 
@@ -20,7 +21,7 @@ tags:
 
 2) Fill the following forms. A decision for assistance will be given within ten (10) business days.
 
-For more information/detail go to: ${"WEBSITE"}`
+For more information/detail go to: ${siteBaseUrl + "detroit-water-project"}`
 </script>
 
 <Callout type="info">

@@ -13,6 +13,7 @@ tags:
 <script>
   import Callout from "$lib/components/molecules/Callout.svelte";
   import PhoneNumber from "$lib/components/molecules/PhoneNumber.svelte"
+  import {siteBaseUrl} from "$lib/data/meta"
 
   const resourceTextDescription = `Cass Free Medical Clinic provides no-cost healthcare services to uninsured and underinsured individuals. The clinic offers a range of medical services including general health check-ups, chronic disease management, and preventive care. Their dedicated team of volunteer healthcare professionals is committed to ensuring everyone has access to quality medical care regardless of their financial situation. No appointments are necessary, and walk-ins are welcome.
 
@@ -22,7 +23,7 @@ The clinic is open at Cass Community United Methodist Church, located at 3901 Ca
 
 Volunteer doctors and Wayne State University medical students staff the operation, offering health screenings, providing no cost medications (as available), and arranging for pro bono procedures, as needed.
 
-For more information/detail go to: ${"WEBSITE"}`
+For more information/detail go to: ${siteBaseUrl + "cass-medical-clinic"}`
 </script>
 
 <Callout type="info">

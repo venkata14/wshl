@@ -13,6 +13,7 @@ tags:
 <script>
   import Callout from "$lib/components/molecules/Callout.svelte";
   import PhoneNumber from "$lib/components/molecules/PhoneNumber.svelte"
+  import {siteBaseUrl} from "$lib/data/meta"
 
   const resourceTextDescription = `Brightmoor Free Store is a community-driven initiative that offers free clothing, household items, and essentials to those in need. Located in the Brightmoor neighborhood, the store operates on donations and volunteer support, promoting a spirit of sharing and sustainability. Visitors can browse and take items at no cost, helping to reduce waste and support the local community.
 
@@ -21,7 +22,7 @@ Go to https://rbidetroit.org/programs/brightmoor-free-store/ to learn more about
 The Free Store is now open once a week: Saturdays, 8:30am – 11:30am.
 There is also a hot meal served on most days that the store is open.
 
-For more information/detail go to: ${"WEBSITE"}`
+For more information/detail go to: ${siteBaseUrl + "brightmoor-free-store"}`
 </script>
 
 <Callout type="info">

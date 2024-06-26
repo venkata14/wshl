@@ -13,6 +13,7 @@ tags:
 <script>
   import Callout from "$lib/components/molecules/Callout.svelte";
   import PhoneNumber from "$lib/components/molecules/PhoneNumber.svelte"
+  import {siteBaseUrl} from "$lib/data/meta"
 
   const resourceTextDescription = `360 Neighborhood Wellness Centers offer comprehensive healthcare services to local communities. The centers provide a wide range of medical services, including primary care, preventive care, mental health support, and wellness programs. With a focus on holistic health, they aim to improve the overall well-being of our patients through personalized and compassionate care. Their experienced team is dedicated to helping you achieve and maintain a healthy lifestyle.
 
@@ -20,7 +21,7 @@ tags:
 
 2) If this is of interest to you, scroll down and fill/submit the form to request and appointment.
 
-For more information/detail go to: ${"WEBSITE"}`
+For more information/detail go to: ${siteBaseUrl + "360-wellness-center"}`
 </script>
 
 <Callout type="info">

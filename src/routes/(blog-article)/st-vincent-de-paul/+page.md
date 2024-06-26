@@ -13,12 +13,13 @@ tags:
 <script>
   import Callout from "$lib/components/molecules/Callout.svelte";
   import PhoneNumber from "$lib/components/molecules/PhoneNumber.svelte"
+  import {siteBaseUrl} from "$lib/data/meta"
 
   const resourceTextDescription = `The Society of St. Vincent de Paul thrift store offers a wide selection of gently used clothing, furniture, household items, and more at affordable prices. All proceeds from the store support local charity programs, providing assistance to those in need in the community. Shop, donate, or volunteer with us to make a difference in the lives of others.
 
 Go to https://svdpdetroit.org/Get-Involved/Shop-Our-Stores/Store-Locations to the left to find locations near you.
 
-For more information/detail go to: ${"WEBSITE"}`
+For more information/detail go to: ${siteBaseUrl + "st-vincent-de-paul"}`
 </script>
 
 <Callout type="info">
