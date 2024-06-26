@@ -3,6 +3,8 @@ import twilio from 'twilio';
 import { TWILIO_ACCOUNTSID, TWILIO_AUTHTOKEN, TWILIO_NUMBER } from '$env/static/private';
 import { error } from '@sveltejs/kit';
 
+export const prerender = false
+
 let sid = TWILIO_ACCOUNTSID
 let auth = TWILIO_AUTHTOKEN
 
@@ -20,7 +22,8 @@ const d = {
     "pharmacy": "This is the Pharmacy Resource you requested from the WSHL Resource Bank!",
 }
 
-async function sendSMS(content = "Sample", to = "+18777804236", devShutDown = true) {
+// 8777804236
+async function sendSMS(content = "Sample", to = "+18606905005", devShutDown = true) {
     if (devShutDown) {
         return false
     }
@@ -43,6 +46,7 @@ async function sendSMS(content = "Sample", to = "+18777804236", devShutDown = tr
 
 export const actions = {
     default: async ({ cookies, request }) => {
+        console.log(request)
         const data = await request.formData();
         const number = data.get("phoneNumber")
         const resourceToSend = d[data.get("resourceToSend")]
