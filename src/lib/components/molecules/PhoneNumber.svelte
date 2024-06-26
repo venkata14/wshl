@@ -29,7 +29,7 @@
 		formData.append('resourceToSend', resourceToSend);
 		formData.append('resourceTextDescription', resourceTextDescription);
 
-		const response = await fetch('/a', {
+		const response = await fetch('/a/a', {
 			method: 'POST',
 			body: formData
 		});
