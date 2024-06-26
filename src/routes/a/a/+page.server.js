@@ -3,8 +3,6 @@ import twilio from 'twilio';
 import { TWILIO_ACCOUNTSID, TWILIO_AUTHTOKEN, TWILIO_NUMBER } from '$env/static/private';
 import { error } from '@sveltejs/kit';
 
-export const prerender = false
-
 let sid = TWILIO_ACCOUNTSID
 let auth = TWILIO_AUTHTOKEN
 
