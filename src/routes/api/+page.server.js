@@ -52,10 +52,10 @@ export const actions = {
         ${resourceTextDescription}`
 
         const didTwilioWork = sendSMS(content, number, false)
-        const bool = await didTwilioWork
-        console.log(bool)
-        if (!bool) {
-            throw new Error(400, "Bad Request to the Twilio API")
-        }
+        // const bool = await didTwilioWork
+        // console.log(bool)
+        // if (!bool) {
+        //     throw new Error(400, "Bad Request to the Twilio API")
+        // }
     }
 };
