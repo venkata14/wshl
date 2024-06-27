@@ -1,11 +1,11 @@
 import type { Feature } from "$lib/utils/types";
 
-export default [ 
+export default [
   {
     name: 'Venkata Patchigolla',
     description:
-      'One of the coolest and awesomest and babuest peoplest person you have ever met.',
+      'M2 at Wayne State University School of Medicine',
     image: 'images/about/venkata.jpg',
-    tags: [{ label: 'person' }]
-  }, 
+    tags: [{ label: 'M2' }]
+  },
 ] as Feature[];

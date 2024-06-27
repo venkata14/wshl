@@ -13,9 +13,9 @@
 		showQRCode = !showQRCode;
 	};
 
-    function printPage() {
-        window.print()
-    }
+	function printPage() {
+		window.print();
+	}
 
 	// @ts-ignore
 	function handleDispatchEvent(e) {
@@ -24,8 +24,7 @@
 				toggleQRCode();
 				break;
 			case 'print':
-				console.log('print');
-                printPage()
+				printPage();
 				break;
 		}
 	}

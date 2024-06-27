@@ -51,7 +51,7 @@ export async function POST(event) {
     const content = `${resourceToSend}
     
     ${resourceTextDescription}`
-    const didTwilioWork = await sendSMS(content, number, true)
+    const didTwilioWork = await sendSMS(content, number, false)
     console.log(didTwilioWork)
 
     if (!didTwilioWork) {
