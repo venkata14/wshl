@@ -24,22 +24,27 @@
 			return;
 		}
 
-		const formData = new FormData(e.target);
-		formData.append('phoneNumber', detailedValue?.phoneNumber);
-		formData.append('resourceToSend', resourceToSend);
-		formData.append('resourceTextDescription', resourceTextDescription);
+		// const formData = new FormData(e.target);
+		// formData.append('phoneNumber', detailedValue?.phoneNumber);
+		// formData.append('resourceToSend', resourceToSend);
+		// formData.append('resourceTextDescription', resourceTextDescription);
 
-		const response = await fetch('/a/a', {
+		const response = await fetch('/a', {
 			method: 'POST',
-			body: formData
+			body: JSON.stringify({
+				phoneNumber: detailedValue?.phoneNumber,
+				resourceToSend: resourceToSend,
+				resourceTextDescription: resourceTextDescription
+			})
 		});
 
 		if (response.ok) {
 			console.log('Form submitted successfully!');
 			responceFromServer = 'success';
+			// console.log(await response.json());
 
 			// reset to prevent spam
-			detailedValue = null
+			detailedValue = null;
 		} else {
 			console.error('Error submitting form:', await response.text());
 			responceFromServer = 'error';
@@ -72,7 +77,9 @@
 
 			{#if valid && detailedValue}
 				<div class="spacing smaller small-width">
-					By Clicking "Submit" you agree to our <a href="/consent-clause" target="_blank" >Consent Clause</a>
+					By Clicking "Submit" you agree to our <a href="/consent-clause" target="_blank"
+						>Consent Clause</a
+					>
 				</div>
 			{/if}
 		</div>

@@ -1,7 +1,7 @@
-// @ts-nocheck
-import twilio from 'twilio';
+import { json } from '@sveltejs/kit'
+import twilio from 'twilio'
 import { TWILIO_ACCOUNTSID, TWILIO_AUTHTOKEN, TWILIO_NUMBER } from '$env/static/private';
-import { error } from '@sveltejs/kit';
+import { error } from '@sveltejs/kit'
 
 let sid = TWILIO_ACCOUNTSID
 let auth = TWILIO_AUTHTOKEN
@@ -43,21 +43,22 @@ async function sendSMS(content = "Sample", to = "+18606905005", devShutDown = tr
         })
 }
 
-export const actions = {
-    default: async ({ cookies, request }) => {
-        const data = await request.formData();
-        const number = data.get("phoneNumber")
-        const resourceToSend = d[data.get("resourceToSend")]
-        const resourceTextDescription = data.get("resourceTextDescription")
-        const content = `${resourceToSend}
-        
-        ${resourceTextDescription}`
+export async function POST(event) {
+    const data = await event.request.json()
+    const number = data.phoneNumber
+    const resourceToSend = data.resourceToSend
+    const resourceTextDescription = data.resourceTextDescription
+    const content = `${resourceToSend}
+    
+    ${resourceTextDescription}`
+    const didTwilioWork = await sendSMS(content, number, true)
+    console.log(didTwilioWork)
 
-        const didTwilioWork = sendSMS(content, number, true)
-        // const bool = await didTwilioWork
-        // console.log(bool)
-        // if (!bool) {
-        //     throw new Error(400, "Bad Request to the Twilio API")
-        // }
+    if (!didTwilioWork) {
+        throw error(404, "API Shut Down, please use another service")
     }
-};
+
+    return json({
+        status: "Success"
+    })
+}
