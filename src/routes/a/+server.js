@@ -48,7 +48,8 @@ export async function POST(event) {
     const number = data.phoneNumber
     const resourceToSend = data.resourceToSend
     const resourceTextDescription = data.resourceTextDescription
-    const content = `${resourceToSend}
+    // @ts-ignore
+    const content = `${d[resourceToSend]}
     
     ${resourceTextDescription}`
     const didTwilioWork = await sendSMS(content, number, false)

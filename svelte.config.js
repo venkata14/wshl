@@ -1,8 +1,8 @@
 // import adapter from '@sveltejs/adapter-static';
-import adapter from '@sveltejs/adapter-static';
-// import adapter from '@sveltejs/adapter-vercel';
+import adapter from '@sveltejs/adapter-auto';
 
-import { vitePreprocess } from '@sveltejs/kit/vite';
+// import { vitePreprocess } from '@sveltejs/kit/vite';
+import { vitePreprocess } from '@sveltejs/vite-plugin-svelte'
 import { mdsvex } from 'mdsvex';
 import rehypeExternalLinks from 'rehype-external-links';
 import rehypeSlug from 'rehype-slug';
@@ -13,9 +13,7 @@ const extensions = ['.svelte', '.md'];
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	kit: {
-		adapter: adapter({
-			strict: false
-		}),
+		adapter: adapter(),
 		prerender: {
 			handleHttpError: 'warn'
 		}
