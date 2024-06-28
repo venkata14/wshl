@@ -13,9 +13,7 @@ const extensions = ['.svelte', '.md'];
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	kit: {
-		adapter: adapter({
-			strict: false
-		}),
+		adapter: adapter(),
 		prerender: {
 			handleHttpError: 'warn'
 		}
