@@ -29,7 +29,7 @@
 		// formData.append('resourceToSend', resourceToSend);
 		// formData.append('resourceTextDescription', resourceTextDescription);
 
-		const response = await fetch('/a/a', {
+		const response = await fetch('/a', {
 			method: 'POST',
 			body: JSON.stringify({
 				phoneNumber: detailedValue?.phoneNumber,
