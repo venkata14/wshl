@@ -17,12 +17,24 @@
 </script>
 
 <div class="container">
-	<Hero />
-	<About />
+	<Hero
+		title={'Robert R. Frank Student Run Free Clinic'}
+		left={' '}
+		right={' '}
+		getStarted={'/srfc/#engine'}
+		about={'/srfc/#about'}
+	/>
+	<br />
+	<br />
+	<About aboutMessage={'SRFC'} imageMessage={'SRFC Image'} />
 	{#if posts && posts.length > 0}
-		<Engine {compPosts} {resourceSummary} />
+		<Engine
+			title={'SRFC Resources'}
+			description={'Click on the categories to access these resources!'}
+			{compPosts}
+			{resourceSummary}
+		/>
 		<br />
-		<RecentPosts {posts} />
 	{/if}
 	<Features {features} />
 </div>

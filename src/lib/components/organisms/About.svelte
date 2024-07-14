@@ -1,45 +1,47 @@
-<script>
+<script lang="ts">
 	import SparklingHighlight from '$lib/components/molecules/SparklingHighlight.svelte';
+	import AboutWSHL from '../atoms/AboutWSHL.svelte';
+	import AboutSRFC from '../atoms/AboutSRFC.svelte';
 	import Image from '../atoms/Image.svelte';
 	import { theme } from '$lib/stores/theme';
 
-	function changeImage(t) {
-		if (t === 'auto') {
-			if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-				// dark mode
-				return "/images/wshl-original-i.webp"
-			}
-			// light mode
-			return "/images/wshl-original.webp"
-		} else if (t === 'dark') {
-			return '/images/wshl-original-i.webp';
-		} else {
-			return '/images/wshl-original.webp';
+	export let aboutMessage: 'WSHL' | 'SRFC' = 'WSHL';
+	export let imageMessage: string | undefined = undefined;
+
+	function changeImage(t: string): string {
+		switch (aboutMessage) {
+			case 'WSHL':
+				if (t === 'auto') {
+					if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+						// dark mode
+						return '/images/wshl-original-i.webp';
+					}
+					// light mode
+					return '/images/wshl-original.webp';
+				} else if (t === 'dark') {
+					return '/images/wshl-original-i.webp';
+				} else {
+					return '/images/wshl-original.webp';
+				}
+				break;
+			case 'SRFC':
+				return '/images/pages/srfc.png';
+				break;
 		}
 	}
 
-	let imagePath
-	$: imagePath = changeImage($theme)
+	let imagePath;
+	$: imagePath = changeImage($theme);
 </script>
 
 <section id="about">
-	<div class="info">
-		<h2>
-			What is the
-			<SparklingHighlight color="secondary">WSHL Resource Bank?</SparklingHighlight>
-		</h2>
-		<p>
-			WSHL Resource Bank is a comprehensive collection of resources available for residents of
-			Detroit. Each resource page includes detailed instructions on how to access the resource. If
-			you find a resource useful, you can easily send the information to your phone via text!
-		</p>
-		<p>
-			Start by selecting a resource category that interests you. Choose a specific resource, and if
-			it meets your needs, simply enter your phone number to text the information to yourself!
-		</p>
-	</div>
+	{#if aboutMessage === 'WSHL'}
+		<svelte:component this={AboutWSHL} />
+	{:else if aboutMessage === 'SRFC'}
+		<svelte:component this={AboutSRFC} />
+	{/if}
 	<div class="image">
-		<Image src={imagePath} alt="WSHL Logo" borderRadius={true} />
+		<Image src={imagePath} alt={imageMessage || 'WSHL Logo'} borderRadius={true} />
 	</div>
 </section>
 

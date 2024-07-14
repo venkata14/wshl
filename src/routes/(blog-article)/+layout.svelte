@@ -56,6 +56,7 @@
 					<div class="note do-not-show-on-print">
 						Published on {dateformat(post.date, 'UTC:dd mmmm yyyy')}
 					</div>
+					<div class="note do-not-show-on-print">{post.author || 'Venkata Patchigolla'}</div>
 					{#if post.updated}
 						<div class="note do-not-show-on-print">
 							Updated on {dateformat(post.updated, 'UTC:dd mmmm yyyy')}

@@ -4,9 +4,10 @@
 	import type { BlogPost, Feature, ResourceMasterOrg } from '$lib/utils/types';
 	import Button from '$lib/components/atoms/Button.svelte';
 
-	export let posts: BlogPost[];
 	export let compPosts: ResourceMasterOrg;
 	export let resourceSummary: Feature[];
+	export let title: string | undefined = undefined;
+	export let description: string | undefined = undefined;
 
 	let resourcePosts: BlogPost[] | undefined = undefined;
 
@@ -33,7 +34,7 @@
 		resourcePosts = compPosts[resourceType];
 
 		resourceRender = resourceType;
-		if (resourceType == "jobIncome") resourceRender = "Job/Income"
+		if (resourceType == 'jobIncome') resourceRender = 'Job/Income';
 
 		// this scrolling is useful on the phone
 		if (switchView) {
@@ -55,8 +56,8 @@
 
 <ContentSection
 	id="engine"
-	title="Finding Resources"
-	description="General Category of Resources. Click them to access more Resources!"
+	title={title || 'Finding Resources'}
+	description={description || 'General Category of Resources. Click them to access more Resources!'}
 	align="top"
 >
 	<div style:position="relative" style:width="100%">

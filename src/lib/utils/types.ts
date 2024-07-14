@@ -35,6 +35,7 @@ export type ResoureListings = {
 
 export type BlogPost = {
   resourceType?: "food" | "transportation" | "healthcare" | "supplies" | "jobIncome" | "utilities" | "mental" | "safety" | "physical" | "housing" | "pharmacy",
+  author?: string,
   tags: string[],
   keywords: string[],
   hidden: boolean,

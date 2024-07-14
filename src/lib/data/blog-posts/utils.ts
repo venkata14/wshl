@@ -79,6 +79,55 @@ export const compImportPosts = (render = false) => {
   return r
 }
 
+export const SRFCcompImportPosts = (render = false) => {
+  const blogImports = import.meta.glob('$routes/*/*/*.md', { eager: true });
+  const innerImports = import.meta.glob('$routes/*/*/*/*.md', { eager: true });
+
+  const imports = { ...blogImports, ...innerImports };
+
+  let r: ResourceMasterOrg = {
+    "food": [],
+    "transportation": [],
+    "healthcare": [],
+    "supplies": [],
+    "jobIncome": [],
+    "utilities": [],
+    "mental": [],
+    "safety": [],
+    "physical": [],
+    "housing": [],
+    "pharmacy": [],
+  }
+
+  const keys = Object.keys(r); // this is the filter
+
+  const posts: BlogPost[] = [];
+
+  for (const path in imports) {
+    const post = imports[path] as any;
+    if (post) {
+      posts.push({
+        ...post.metadata,
+        html: render && post.default.render ? post.default.render()?.html : undefined,
+      });
+
+      for (let i = 0; i < keys.length; i++) {
+        const resource = keys[i];
+        if (post.metadata.resourceType == resource) {
+          r[resource].push({
+            ...post.metadata,
+            html: render && post.default.render ? post.default.render()?.html : undefined,
+          })
+        }
+
+      }
+
+    }
+  }
+
+  return r
+}
+
 export const filterPosts = (posts: BlogPost[]) => {
   return posts.filter((post) => !post.hidden)
     .sort((a, b) =>

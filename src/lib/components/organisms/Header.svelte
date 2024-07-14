@@ -13,6 +13,7 @@
 		</a>
 		<div class="links">
 			<a href="/resources">Resources</a>
+			<a href="/srfc">SRFC</a>
 			<ThemeToggle />
 		</div>
 	</nav>
