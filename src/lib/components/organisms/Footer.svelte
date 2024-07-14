@@ -7,12 +7,10 @@
 		<FooterWave />
 	</div>
 	<div class="content">
-		<div class="copyright">
-			Webpage created by Venkata Patchigolla.
-		</div>
+		<div class="copyright">Webpage created by Venkata Patchigolla.</div>
 		<div class="credits">
 			Credits: This webpage was built on top of a template created by <a
-				href="https://fantinel.dev?utm_source=site-template"
+				href="https://github.com/MatFantinel"
 				target="_blank"
 				rel="noopener noreferrer">Matheus Fantinel</a
 			>.

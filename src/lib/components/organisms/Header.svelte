@@ -46,7 +46,7 @@
 			@include for-phone-only {
 				.links {
 					a {
-						display: none;
+						display: auto;
 					}
 				}
 			}
