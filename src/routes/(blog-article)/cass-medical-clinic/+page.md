@@ -32,7 +32,7 @@ For more information/detail go to: ${siteBaseUrl + "cass-medical-clinic"}`
 
 # What is Cass Free Medical Clinic?
 
-Cass Free Medical Clinic provides no-cost healthcare services to uninsured and underinsured individuals. The clinic offers a range of medical services including general health check-ups, chronic disease management, and preventive care. Their dedicated team of volunteer healthcare professionals is committed to ensuring everyone has access to quality medical care regardless of their financial situation. No appointments are necessary, and walk-ins are welcome.
+Cass Free Medical Clinic provides no-cost healthcare services to uninsured and underinsured individuals. The clinic offers a range of medical services including general health check-ups, chronic disease management, and preventive care. Their dedicated team of volunteer healthcare professionals is committed to ensuring everyone has access to quality medical care regardless of their financial situation. No appointments are necessary, and walk-ins are welcome!
 
 ## How do I get started with this resource?
 
