@@ -17,7 +17,7 @@
 	on:cardClick
 	href={slug ? `/${slug}` : undefined}
 	target="_self"
-	additionalClass="blog-post-card {!showImage || !coverImage ? 'no-image' : ''}"
+	additionalClass="blog-post-card pointer-hover {!showImage || !coverImage ? 'no-image' : ''}"
 >
 	<div class="image" slot="image">
 		{#if coverImage}
@@ -90,6 +90,10 @@
 
 	:global(.blog-post-card .image img) {
 		object-fit: cover;
+	}
+
+	:global(.pointer-hover:hover) {
+		cursor: pointer;
 	}
 
 	:global(.blog-post-card.no-image > .image) {
