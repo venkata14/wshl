@@ -63,3 +63,9 @@ export type ResourceMasterOrg = {
   housing: BlogPost[],
   pharmacy: BlogPost[],
 }
+
+export type SRFCResourceMasterOrg = {
+  "srfc-support": BlogPost[],
+  "srfc-screenings": BlogPost[],
+  "srfc-clinic": BlogPost[]
+}

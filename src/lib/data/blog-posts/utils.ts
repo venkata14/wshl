@@ -8,7 +8,7 @@ const ifYouRemoveMeTheBuildFails = Prism;
 import 'prism-svelte';
 import readingTime from 'reading-time/lib/reading-time';
 import striptags from 'striptags';
-import type { BlogPost, ResourceMasterOrg } from "$lib/utils/types";
+import type { BlogPost, ResourceMasterOrg, SRFCResourceMasterOrg } from "$lib/utils/types";
 
 export const importPosts = (render = false) => {
   const blogImports = import.meta.glob('$routes/*/*/*.md', { eager: true });
@@ -85,18 +85,10 @@ export const SRFCcompImportPosts = (render = false) => {
 
   const imports = { ...blogImports, ...innerImports };
 
-  let r: ResourceMasterOrg = {
-    "food": [],
-    "transportation": [],
-    "healthcare": [],
-    "supplies": [],
-    "jobIncome": [],
-    "utilities": [],
-    "mental": [],
-    "safety": [],
-    "physical": [],
-    "housing": [],
-    "pharmacy": [],
+  let r: SRFCResourceMasterOrg = {
+    "srfc-support": [],
+    "srfc-screenings": [],
+    "srfc-clinic": []
   }
 
   const keys = Object.keys(r); // this is the filter

@@ -2,91 +2,27 @@ import type { Feature } from "$lib/utils/types";
 
 export default [
   {
-    name: 'Food Resources',
-    resourceType: "food",
+    name: 'Support Services',
+    resourceType: "srfc-support",
     description:
-      'forgotten harvest, gleaners, SNAP',
+      "auntie na's village",
     image: 'images/features/markdown.jpg',
-    tags: ["Food", "Instructions"]
+    tags: ["food", "water", "clothing", "medicine", "shelter", "educational programs"]
   },
   {
-    name: 'Transportation Resources',
-    resourceType: "transportation",
+    name: 'Medical Testing and Screening Services',
+    resourceType: "srfc-screenings",
     description:
-      'nothing currently',
+      'bcccp, basha diagnostics',
     image: 'images/features/themeable.jpg',
-    tags: ["Transportation", "Instructions"]
+    tags: ["medical imaging", "medical diagnostics", "breast/cervical screening"]
   },
   {
-    name: 'Healthcare Resources',
-    resourceType: "healthcare",
+    name: 'Free Clinics',
+    resourceType: "srfc-clinic",
     description:
-      'cass clinic, 360 neighboorhood wellness centers',
+      'huda clinic, malta clinic',
     image: 'images/features/themeable.jpg',
-    tags: ["Healthcare", "Instructions"]
+    tags: ["Primary Care", "Dental Care", "Mental Health Services", "Vision Care", "Specialty Care"]
   },
-  {
-    name: 'Supplies Resources',
-    resourceType: "supplies",
-    description:
-      'brightmoor free store, society of St. Vincent De Paul',
-    image: 'images/features/themeable.jpg',
-    tags: ["Supplies", "Instructions"]
-  },
-  {
-    name: 'Job/Income Resources',
-    resourceType: "jobIncome",
-    description:
-      'detroit at work',
-    image: 'images/features/themeable.jpg',
-    tags: ["Job/Income", "Instructions"]
-  },
-  {
-    name: 'Utilities Resources',
-    resourceType: "utilities",
-    description:
-      'dte, the human utility, MI bridges state emergency relief',
-    image: 'images/features/themeable.jpg',
-    tags: ["Utilities", "Instructions"]
-  },
-  {
-    name: 'Mental Health Resources',
-    resourceType: "mental",
-    description:
-      'NAMI, development centers',
-    image: 'images/features/themeable.jpg',
-    tags: ["Mental Health", "Instructions"]
-  },
-  {
-    name: 'Safety Resources',
-    resourceType: "safety",
-    description:
-      'domestic shelters',
-    image: 'images/features/themeable.jpg',
-    tags: ["Safety", "Instructions"]
-  },
-  {
-    name: 'Physical Resources',
-    resourceType: "physical",
-    description:
-      'fitkids360',
-    image: 'images/features/themeable.jpg',
-    tags: ["Physical", "Instructions"]
-  },
-  {
-    name: 'Housing Resources',
-    resourceType: "housing",
-    description:
-      'matrix human services',
-    image: 'images/features/themeable.jpg',
-    tags: ["Housing", "Instructions", "Counseling"]
-  },
-  {
-    name: 'Pharmacy Resources',
-    resourceType: "pharmacy",
-    description:
-      'rxsaver',
-    image: 'images/features/themeable.jpg',
-    tags: ["Pharmacy", "Instructions"]
-  }
-] as Feature[];
+];
