@@ -5,16 +5,14 @@
 export const siteBaseUrl = 'https://wshl.vercel.app/';
 
 export const keywords = [
-	'Svelte',
-	'SvelteKit',
-	'Template',
-	'Blog',
-	'Starter',
-	'Static Site'
+	'WSHL',
+	'Resource Bank',
+	'Resources',
+	'Social Determinants of Health',
 ];
 
 export const description =
-	"A light, neat, and easy-to-use SvelteKit template for your next website.";
+	"A light, neat, and easy-to-use way to connect patients with resources in the Detroit area.";
 
 export const title = 'WSHL Resource Bank';
 
