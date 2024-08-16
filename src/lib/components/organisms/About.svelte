@@ -2,10 +2,11 @@
 	import SparklingHighlight from '$lib/components/molecules/SparklingHighlight.svelte';
 	import AboutWSHL from '../atoms/AboutWSHL.svelte';
 	import AboutSRFC from '../atoms/AboutSRFC.svelte';
+	import AboutRemindFeature from '../atoms/AboutRemindFeature.svelte';
 	import Image from '../atoms/Image.svelte';
 	import { theme } from '$lib/stores/theme';
 
-	export let aboutMessage: 'WSHL' | 'SRFC' = 'WSHL';
+	export let aboutMessage: 'WSHL' | 'SRFC' | 'remind' = 'WSHL';
 	export let imageMessage: string | undefined = undefined;
 
 	function changeImage(t: string): string {
@@ -27,6 +28,8 @@
 			case 'SRFC':
 				return '/images/pages/srfc.png';
 				break;
+			default:
+				return '';
 		}
 	}
 
@@ -34,15 +37,19 @@
 	$: imagePath = changeImage($theme);
 </script>
 
-<section id="about">
+<section id="about" style={imagePath === '' ? 'display: block' : ''}>
 	{#if aboutMessage === 'WSHL'}
 		<svelte:component this={AboutWSHL} />
 	{:else if aboutMessage === 'SRFC'}
 		<svelte:component this={AboutSRFC} />
+	{:else if aboutMessage === 'remind'}
+		<svelte:component this={AboutRemindFeature} />
 	{/if}
-	<div class="image">
-		<Image src={imagePath} alt={imageMessage || 'WSHL Logo'} borderRadius={true} />
-	</div>
+	{#if imagePath !== ''}
+		<div class="image">
+			<Image src={imagePath} alt={imageMessage || 'WSHL Logo'} borderRadius={true} />
+		</div>
+	{/if}
 </section>
 
 <style lang="scss">

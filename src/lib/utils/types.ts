@@ -64,6 +64,13 @@ export type ResourceMasterOrg = {
   pharmacy: BlogPost[],
 }
 
+export type ListObj = {
+  message: string,
+  selected: boolean,
+  cardTitle: string,
+  cardSlug: string
+}
+
 export type SRFCResourceMasterOrg = {
   "srfc-support": BlogPost[],
   "srfc-screenings": BlogPost[],

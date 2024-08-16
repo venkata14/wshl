@@ -14,7 +14,7 @@
 	export let resourceToSend: 'food' | 'transportation';
 	export let resourceTextDescription: string = '';
 
-	async function submitForm(e) {
+	async function submitForm(e: any) {
 		e.preventDefault();
 
 		// Filter

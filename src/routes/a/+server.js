@@ -39,7 +39,7 @@ function extractUrlComp(text) {
 }
 
 // 8777804236
-async function sendSMS(content = "Sample", to = "+18606905005", devShutDown = true) {
+async function sendSMS(content = "", to = "", devShutDown = true) {
     if (devShutDown) {
         console.log("API Shut Down")
         return false
