@@ -6,8 +6,22 @@
 	<h2>
 		<SparklingHighlight color="secondary">Remind Patients of their Resources</SparklingHighlight>
 	</h2>
-	<p>Explaining what this feature is</p>
-	<p>Explaining more of what this feature is.</p>
+	<p>
+		Remind patients of their resources with this feature! This feature is an invaluable tool for
+		ensuring patients remain aware of the resources available to them, even several days or weeks
+		after their visit.
+	</p>
+	<p>
+		To use this feature, simply input the patient’s phone number, select the appropriate resources
+		from the list (you can also search for specific resources using the search functionality), and
+		send a reminder text directly to the patient.
+	</p>
+	<p>
+		For those interested in gathering feedback, you can easily include a survey link within the
+		reminder text. Create a survey using Qualtrics or Google Forms, then paste the link into the
+		"Survey Link" section. This step is optional, but it can provide valuable insights into the
+		effectiveness of the resources provided. The link can be a maximum of 50 characters long.
+	</p>
 </div>
 
 <style lang="scss">
