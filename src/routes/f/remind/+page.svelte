@@ -130,11 +130,14 @@
 				<div class="break"></div>
 
 				<label for="survey"
-					>Survey Link <div style="font-size: smaller;">(optional, 50 chars max)</div>
+					>Survey Link <div style="font-size: smaller;">
+						(optional, currently disabled, 50 chars max)
+					</div>
 					<input
 						type="text"
 						name="survey"
 						id="survey"
+						disabled={true}
 						placeholder="https:// ..."
 						bind:value={surveyLink}
 					/>

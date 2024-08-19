@@ -1,9 +1,14 @@
 <script lang="ts">
 	import Logo from '$lib/components/atoms/Logo.svelte';
 	import ThemeToggle from '$lib/components/molecules/ThemeToggle.svelte';
+	import Search from '$lib/components/organisms/Search.svelte';
+	import SearchBarIcon from '../atoms/SearchBarIcon.svelte';
+	import DropDownMenuLight from './DropDownMenuLight.svelte';
 	import RssLink from '$lib/components/atoms/RssLink.svelte';
 
 	export let showBackground = false;
+
+	let showSearch = false;
 </script>
 
 <header class:has-background={showBackground}>
@@ -12,12 +17,29 @@
 			<Logo />
 		</a>
 		<div class="links">
-			<a href="/resources">Resources</a>
-			<a href="/srfc">SRFC</a>
+			<DropDownMenuLight
+				links={[
+					{
+						href: '/srfc',
+						title: 'SRFC'
+					},
+					{
+						href: '/resources',
+						title: 'All Resources'
+					}
+				]}
+			/>
 			<ThemeToggle />
+			<div on:click={() => (showSearch = true)}>
+				<SearchBarIcon />
+			</div>
 		</div>
 	</nav>
 </header>
+
+{#if showSearch}
+	<Search on:outsideClickEvent={() => (showSearch = false)} />
+{/if}
 
 <style lang="scss">
 	@import '$lib/scss/breakpoints.scss';

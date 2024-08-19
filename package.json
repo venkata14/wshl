@@ -48,6 +48,7 @@
 		"@fontsource/merriweather": "^5.0.13",
 		"@fontsource/ubuntu-mono": "^5.0.20",
 		"@sveltejs/adapter-auto": "^3.2.2",
+		"flexsearch": "^0.7.43",
 		"pocketbase": "^0.21.4",
 		"qrious": "^4.0.2",
 		"svelte-tel-input": "^3.4.1",

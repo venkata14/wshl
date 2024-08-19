@@ -36,6 +36,9 @@
 	@include define-color('code-text', #ffffff);
 	@include define-color('code-inline-background', #e3e3e3);
 
+	// Used for the Search border
+	@include define-color('search-border-hue', hsl(0 0% 0% / 40%));
+
 	--color--waves-start: rgba(var(--color--primary-rgb), 0.3);
 	--color--waves-end: rgba(var(--color--primary-rgb), 0.1);
 
@@ -76,6 +79,9 @@
 	@include define-color('callout-accent--success', #00c48f);
 
 	@include define-color('code-inline-background', #2b3131);
+
+	// Used for the Search border
+	@include define-color('search-border-hue', hsla(0, 0%, 100%, 0.4));
 }
 
 :root {
