@@ -49,7 +49,7 @@
 	<div class="search" bind:this={element}>
 		<input
 			bind:value={searchTerm}
-			placeholder="Search"
+			placeholder="Search Resources"
 			autocomplete="off"
 			spellcheck="false"
 			type="search"

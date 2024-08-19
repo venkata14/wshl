@@ -26,6 +26,10 @@
 					{
 						href: '/resources',
 						title: 'All Resources'
+					},
+					{
+						href: '/f/remind',
+						title: 'Resource Reminder'
 					}
 				]}
 			/>
