@@ -20,6 +20,10 @@
 			<DropDownMenuLight
 				links={[
 					{
+						href: '/',
+						title: 'Home'
+					},
+					{
 						href: '/srfc',
 						title: 'SRFC'
 					},

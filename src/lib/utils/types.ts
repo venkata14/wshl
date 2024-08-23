@@ -88,3 +88,12 @@ export type Result = {
   slug: string
   title: string
 }
+
+export type ScreenSchema = {
+  type: string,
+  question: string,
+  answers: string[],
+  defaultAnswer: string,
+  positiveAnswer: string,
+  keywords: string[]
+}

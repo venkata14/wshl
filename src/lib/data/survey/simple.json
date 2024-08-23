@@ -1,0 +1,48 @@
+{
+    "screen": [
+        {
+            "type": "radio",
+            "question": "In the past month, did Poor Physical or Mental Health keep you from doing your usual activities, like work, school or a hobby?",
+            "answers": [
+                "yes",
+                "no"
+            ],
+            "defaultAnswer": "no",
+            "positiveAnswer": "yes",
+            "keywords": ["mental", "physical"]
+        },
+        {
+            "type": "radio",
+            "question": "In the past year, was there a time when you needed to see a doctor but could not because it cost too much?",
+            "answers": [
+                "yes",
+                "no"
+            ],
+            "defaultAnswer": "no",
+            "positiveAnswer": "yes",
+            "keywords": ["healthcare"]
+        },
+        {
+            "type": "radio",
+            "question": "Do you ever eat less than you feel you should because there is not enought Food?",
+            "answers": [
+                "yes",
+                "no"
+            ],
+            "defaultAnswer": "no",
+            "positiveAnswer": "yes",
+            "keywords": ["food"]
+        },
+        {
+            "type": "radio",
+            "question": "Do you need a job or other Steady Source of Income?",
+            "answers": [
+                "yes",
+                "no"
+            ],
+            "defaultAnswer": "no",
+            "positiveAnswer": "yes",
+            "keywords": ["job"]
+        }
+    ]
+}

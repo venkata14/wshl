@@ -247,7 +247,8 @@
 		margin: 0.5rem;
 		padding: 0.5em;
 
-		overflow: scroll;
+		overflow-x: auto;
+		overflow-y: scroll;
 
 		@include for-phone-only {
 			width: auto;
