@@ -32,6 +32,10 @@
 						title: 'All Resources'
 					},
 					{
+						href: '/f/screen',
+						title: 'Patient Screener/Survey'
+					},
+					{
 						href: '/f/remind',
 						title: 'Resource Reminder'
 					}
