@@ -43,6 +43,94 @@
             "defaultAnswer": "no",
             "positiveAnswer": "yes",
             "keywords": ["job"]
+        },
+        {
+            "type": "radio",
+            "question": "Do you think completing more Education or Training, like earning a high school diploma, going to college, or learning a trade, would be helpful for you?",
+            "answers": [
+                "yes",
+                "no"
+            ],
+            "defaultAnswer": "no",
+            "positiveAnswer": "yes",
+            "keywords": ["education"]
+        },
+        {
+            "type": "radio",
+            "question": "Are you worried that in the next few months, you may not have reliable Housing that you own, rent or share?",
+            "answers": [
+                "yes",
+                "no"
+            ],
+            "defaultAnswer": "no",
+            "positiveAnswer": "yes",
+            "keywords": ["housing"]
+        },
+        {
+            "type": "radio",
+            "question": "In the past year, have you had a hard time paying your utility company Bills?",
+            "answers": [
+                "yes",
+                "no"
+            ],
+            "defaultAnswer": "no",
+            "positiveAnswer": "yes",
+            "keywords": ["utilities"]
+        },
+        {
+            "type": "radio",
+            "question": "Do you need help Finding or Paying for Care of Loved Ones? For example, child care or day care for an older adult.",
+            "answers": [
+                "yes",
+                "no"
+            ],
+            "defaultAnswer": "no",
+            "positiveAnswer": "yes",
+            "keywords": ["childcare", "adultcare"]
+        },
+        {
+            "type": "radio",
+            "question": "Do you need a dependable Way to Get to Work or School and your appointments?",
+            "answers": [
+                "yes",
+                "no"
+            ],
+            "defaultAnswer": "no",
+            "positiveAnswer": "yes",
+            "keywords": ["transportation"]
+        },
+        {
+            "type": "radio",
+            "question": "Do you need Household Supplies? For example, clothing, shoes, blankets, diapers, toothpaste, mattresses and shampoo.",
+            "answers": [
+                "yes",
+                "no"
+            ],
+            "defaultAnswer": "no",
+            "positiveAnswer": "yes",
+            "keywords": ["supplies", "clothing", "shoes", "blankets", "diapers", "toothpaste", "mattresses", "shampoo"]
+        },
+        {
+            "type": "radio",
+            "question": "If you take Medication, are you not taking it because it is too expensive?",
+            "answers": [
+                "yes",
+                "no"
+            ],
+            "defaultAnswer": "no",
+            "positiveAnswer": "yes",
+            "keywords": ["pharmacy"]
+        },
+        {
+            "type": "radio",
+            "question": "Do you ever Feel Unsafe in your home or neighborhood?",
+            "answers": [
+                "yes",
+                "no"
+            ],
+            "defaultAnswer": "no",
+            "positiveAnswer": "yes",
+            "keywords": ["safety"]
         }
     ]
 }

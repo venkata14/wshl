@@ -1,8 +1,10 @@
 <script>
 	// @ts-nocheck
 	import { createEventDispatcher } from 'svelte';
+	import { capitalizeFirstLetter } from '$lib/utils/utils';
 
 	import simple from '$lib/data/survey/simple.json';
+	import Button from '../atoms/Button.svelte';
 
 	export let screenQuestions;
 	let results = {};
@@ -30,18 +32,14 @@
 
 	function handleSubmit() {
 		completeResults();
-		dispatch("results", {
-            results
-        })
-	}
-
-	function capitalizeFirstLetter(s) {
-		return s.charAt(0).toUpperCase() + s.slice(1);
+		dispatch('results', {
+			results
+		});
 	}
 </script>
 
 {#if screenQuestions && screenQuestions.length > 0}
-	<div class="container">
+	<div>
 		{#each screenQuestions as screenItem}
 			<form>
 				<fieldset class="">
@@ -68,7 +66,8 @@
 				</fieldset>
 			</form>
 		{/each}
-		<button type="button" on:click={handleSubmit}>Submit</button>
+		<Button type="button" on:click={handleSubmit}>Submit</Button>
+		<br />
 	</div>
 {/if}
 

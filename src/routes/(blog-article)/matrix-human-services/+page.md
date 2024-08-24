@@ -6,6 +6,7 @@ date: 2024-06-22T21:55:27.154Z
 excerpt: Housing counseling, rent/mortgage assistance, home buyer workshops.
 coverImage: /images/posts/matrixhumanservies.png
 tags:
+  - housing
   - housing counseling
   - rent/mortgage assistance
   - home buyer workshops

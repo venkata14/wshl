@@ -7,6 +7,7 @@ excerpt: Free dental, medical, and eye care
 coverImage: /images/posts/malta.png
 author: Nehaar Nimmagadda
 tags:
+  - healthcare
   - dental care
   - medical care
   - eye care
