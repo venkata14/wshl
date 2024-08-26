@@ -50,16 +50,16 @@
 								<input
 									type="radio"
 									name="radio"
-									id={answer}
+									id={screenItem.question + answer}
 									on:change={(e) =>
 										buildResult(
-											e.target.id,
+											answer,
 											screenItem.question,
 											screenItem.type,
 											screenItem.defaultAnswer
 										)}
 								/>
-								<label for={answer}>{capitalizeFirstLetter(answer)}</label>
+								<label for={screenItem.question + answer}>{capitalizeFirstLetter(answer)}</label>
 							</div>
 						{/each}
 					{/if}

@@ -8,9 +8,10 @@
 		<SparklingHighlight color="secondary">WSHL Resource Bank?</SparklingHighlight>
 	</h2>
 	<p>
-		WSHL Resource Bank is a comprehensive collection of resources available for residents of
-		Detroit. Each resource page includes detailed instructions on how to access the resource. If you
-		find a resource useful, you can easily send the information to your phone via text!
+		Wayne State Health Leaders (WSHL) Resource Bank is a comprehensive collection of resources
+		available for residents of Detroit. Each resource page includes detailed instructions on how to
+		access the resource. If you find a resource useful, you can easily send the information to your
+		phone via text!
 	</p>
 	<p>
 		Start by selecting a resource category that interests you. Choose a specific resource, and if it
