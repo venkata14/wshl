@@ -5,6 +5,7 @@
 	import Features from '$lib/components/organisms/Features.svelte';
 	import type { Feature, BlogPost, ResourceMasterOrg } from '$lib/utils/types';
 	import Engine from '$lib/components/organisms/Engine.svelte';
+	import FeatureDescription from '$lib/components/organisms/FeatureDescription.svelte';
 
 	export let data: {
 		features: Feature[];
@@ -19,6 +20,8 @@
 <div class="container">
 	<Hero />
 	<About />
+	<FeatureDescription aboutMessage={'install_as_app'} orientation={'right'} />
+	<FeatureDescription aboutMessage={'survey'} orientation={'left'} />
 	{#if posts && posts.length > 0}
 		<Engine {compPosts} {resourceSummary} />
 		<br />

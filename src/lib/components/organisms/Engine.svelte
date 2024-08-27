@@ -133,7 +133,7 @@
 
 		@include for-phone-only {
 			width: 100%;
-			height: fit-content;
+			// height: fit-content;
 		}
 	}
 	.float-left {

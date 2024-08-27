@@ -5,7 +5,7 @@ import rehypeExternalLinks from 'rehype-external-links';
 import rehypeSlug from 'rehype-slug';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 
-const extensions = ['.svelte', '.md'];
+const extensions = ['.svelte', '.md', '.mdInfo'];
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {

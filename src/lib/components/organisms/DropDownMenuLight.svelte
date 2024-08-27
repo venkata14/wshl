@@ -30,6 +30,7 @@
 	.dropdown-container {
 		position: relative;
 		display: inline-block;
+		z-index: 5;
 	}
 
 	.dropdown-button {
