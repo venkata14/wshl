@@ -5,7 +5,7 @@ export default [
     name: 'Support Services',
     resourceType: "srfc-support",
     description:
-      "auntie na's village",
+      "auntie na's village, MI Bridges Medicaid Application",
     image: 'images/features/markdown.jpg',
     tags: ["food", "water", "clothing", "medicine", "shelter", "educational programs"]
   },
