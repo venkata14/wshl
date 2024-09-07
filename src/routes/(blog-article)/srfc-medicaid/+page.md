@@ -15,7 +15,7 @@ tags:
   import PhoneNumber from "$lib/components/molecules/PhoneNumber.svelte"
   import {siteBaseUrl} from "$lib/data/meta"
 
-  const resourceTextDescription = `Here is the resource you requested regarding Malta Dental and Medical Clinic.
+  const resourceTextDescription = `Here is the resource you requested regarding the MI Bridges Medicaid Application.
 
 Go to this webpage for more info: ${siteBaseUrl + "srfc-medicaid"}`
 </script>
