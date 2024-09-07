@@ -38,6 +38,9 @@ Founded by a physician for physicians and the patients in their care. Basha Diag
 ## Referral Form
 http://openmri.bashaopenmri.com/wp-content/uploads/2014/04/Basha_General_Appointment_Form.pdf	
 
+## Scheduling Number
+Phone: 248-288-5490
+
 ## Contact Information/Hours
 #### Royal Oak
 Phone: 248-288-1600
