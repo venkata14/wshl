@@ -57,7 +57,7 @@ export async function POST(event) {
 
 ${remindAreaText}
 
-${surveyLink && surveyLink !== "" ? "Please give us your feedback but completing this short survey: " + surveyLink : ""}`
+${surveyLink && surveyLink !== "" ? "Please give us your feedback by completing this short survey: " + surveyLink : ""}`
 
     const didTwilioWork = await sendSMS(content, number, false)
 
