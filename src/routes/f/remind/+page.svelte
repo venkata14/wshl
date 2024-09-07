@@ -46,16 +46,17 @@
 			return;
 		}
 		// check if link is google form or qualtrics
-		// if (
-		// 	surveyLink &&
-		// 	(surveyLink.includes('docs.google.com') ||
-		// 		surveyLink.includes('qualtrics.com') ||
-		// 		surveyLink.includes(''))
-		// ) {
-		// 	console.error('Only Google Forms and Qualtrics Surveys allowed.');
-		// 	errorMessage = 'Only Google Forms and Qualtrics Surveys allowed.';
-		// 	return;
-		// }
+		if (
+			!(
+				surveyLink.includes('docs.google.com') ||
+				surveyLink.includes('qualtrics.com') ||
+				surveyLink.includes('forms.gle')
+			)
+		) {
+			console.error('Only Google Forms and Qualtrics Surveys allowed.');
+			errorMessage = 'Only Google Forms and Qualtrics Surveys allowed.';
+			return;
+		}
 		// check phone number
 		if (!(valid && detailedValue && detailedValue?.phoneNumber !== '')) {
 			console.error('Invalid Phone Number/Typing');
