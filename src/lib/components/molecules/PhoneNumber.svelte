@@ -1,4 +1,5 @@
 <script lang="ts">
+	import SurveyLineOrg from '../atoms/SurveyLineOrg.svelte';
 	import TelephoneInput from '../atoms/TelephoneInput.svelte';
 	import type { DetailedValue } from 'svelte-tel-input/types';
 
@@ -82,6 +83,7 @@
 					>
 				</div>
 			{/if}
+			<SurveyLineOrg />
 		</div>
 		{#if valid && detailedValue}
 			<button>Submit</button>
