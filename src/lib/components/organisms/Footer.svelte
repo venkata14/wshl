@@ -1,5 +1,6 @@
 <script>
 	import FooterWave from '$lib/icons/footer-wave.svelte';
+	import SurveyLineOrg from '../atoms/SurveyLineOrg.svelte';
 </script>
 
 <footer>
@@ -15,6 +16,7 @@
 				rel="noopener noreferrer">Matheus Fantinel</a
 			>.
 		</div>
+		<SurveyLineOrg />
 	</div>
 </footer>
 
